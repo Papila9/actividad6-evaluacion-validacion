@@ -10,8 +10,8 @@ Proyecto académico para comparar modelos de clasificación de sentimiento en el
 
 El tablero de resultados se organizó en Trello, con una lista por etapa del proyecto y una tarjeta por cada resultado importante.
 
-- [Ver el tablero en Trello](TU-ENLACE-DE-TRELLO)
-- [Ver capturas del tablero en PDF](tablero/A6_Tablero_Trello.docx.pdf)
+- [Ver el tablero en Trello](https://trello.com/invite/b/6ade538ae5380b300e330fb3/ATTI0f042ed8cda728b7d3e47cf155ff5ec47A226422/actividad-6-evaluacion-de-modelos-sentimientos-de-aerolineas)
+- [Ver capturas del tablero en PDF](https://docs.google.com/document/d/1jAJCLiYclUJ2gkxkWcQJFSY7oHOPcYe-/edit?usp=sharing&ouid=115662426726842587394&rtpof=true&sd=true)
 
 | Lista del tablero | Qué contiene |
 |---|---|
