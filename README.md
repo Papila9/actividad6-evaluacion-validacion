@@ -6,6 +6,25 @@
 
 Proyecto académico para comparar modelos de clasificación de sentimiento en el conjunto Twitter US Airline Sentiment. Se comparan un clasificador base, Regresión Logística y Random Forest con TF-IDF; el F1 macro es la métrica principal por el desequilibrio entre clases.
 
+## Tablero visual en Trello
+
+El tablero de resultados se organizó en Trello, con una lista por etapa del proyecto y una tarjeta por cada resultado importante.
+
+- [Ver el tablero en Trello](TU-ENLACE-DE-TRELLO)
+- [Ver capturas del tablero en PDF](tablero/A6_Tablero_Trello.docx.pdf)
+
+| Lista del tablero | Qué contiene |
+|---|---|
+| Problema y objetivo | Descripción del problema y objetivo SMART |
+| Métricas | Comparación de modelos, matriz de confusión y significado de cada métrica |
+| Validación | Validación cruzada, comparación con el modelo base y prueba de McNemar |
+| Umbral, ROC y AUC | Ajuste del umbral y curvas ROC |
+| Prueba A/B y significancia | Simulación con datos sintéticos y su resultado estadístico |
+| Modelo seleccionado | Modelo elegido (Regresión Logística, umbral 0.30), justificación e impacto de negocio |
+| Evidencia y pendientes | Registro de experimentos, entregables y limitaciones |
+
+El tablero HTML interactivo (`resultados/tablero_resultados.html`) se conserva como apoyo adicional.
+
 ## Datos
 
 El análisis espera un archivo local `Tweets.csv` con las columnas `text` y `airline_sentiment`. El archivo entregado contiene 14,640 registros. No se incluye en el control de versiones. La colección se conoce como Twitter US Airline Sentiment y se distribuye en Kaggle/CrowdFlower; véase la ficha del conjunto en https://www.kaggle.com/datasets/crowdflower/twitter-airline-sentiment.
