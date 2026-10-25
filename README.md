@@ -125,7 +125,6 @@ La simulación A/B usa supuestos fijados en el código y no representa clientes 
 
 ## Referencias
 
-- Kaggle/CrowdFlower, Twitter US Airline Sentiment: https://www.kaggle.com/datasets/crowdflower/twitter-airline-sentiment
-- Scikit-learn, validación cruzada y StratifiedGroupKFold: https://scikit-learn.org/stable/modules/cross_validation.html
-- McNemar, Q. (1947). Note on the sampling error of the difference between correlated proportions or percentages. Psychometrika, 12(2), 153–157. https://doi.org/10.1007/BF02295996
-- Dietterich, T. G. (1998). Approximate Statistical Tests for Comparing Supervised Classification Learning Algorithms. Neural Computation, 10(7), 1895–1923. https://doi.org/10.1162/089976698300017197
+- Universidad Tecmilenio. (s. f.). T13: Evaluación de modelo  [PDF].
+- Universidad Tecmilenio. (s. f.). T14: Validación de modelos [PDF].
+
