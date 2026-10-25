@@ -1,8 +1,10 @@
+import json
 import numpy as np
 import pandas as pd
 import pytest
 
 from src.evaluacion_modelos import grouped_holdout, load_and_clean, make_models, mcnemar, run_evaluation, threshold_table
+from src.generar_tablero import build_dashboard
 from src.prueba_ab import analyze_real_csv, sample_size_two_proportions, simulate_ab
 
 
@@ -128,3 +130,11 @@ def test_evaluation_exports_results(tmp_path):
     cv_frame = pd.read_csv(out / "validacion_cruzada.csv")
     assert summary["best_by_macro_f1"] == cv_frame.loc[cv_frame.f1_macro_mean.idxmax(), "model"]
     assert summary["statistics"]["recommended_negative_threshold"] in [0.30, 0.40, 0.50, 0.60, 0.70]
+    synthetic_table, synthetic_result = simulate_ab(seed=7, n_per_group=30)
+    synthetic_table.to_csv(out / "simulacion_ab_sintetica.csv", index=False)
+    (out / "simulacion_ab_sintetica.json").write_text(json.dumps(synthetic_result), encoding="utf-8")
+    dashboard = build_dashboard(out)
+    dashboard_html = dashboard.read_text(encoding="utf-8")
+    assert "Modelo seleccionado" in dashboard_html
+    assert "SIMULACIÓN CON DATOS SINTÉTICOS" in dashboard_html
+    assert "data:image/png;base64," in dashboard_html

@@ -13,9 +13,11 @@ La preparación elimina filas sin texto o etiqueta, textos vacíos, etiquetas fu
 ```text
 src/evaluacion_modelos.py      Evaluación, validación y exportación de resultados
 src/prueba_ab.py               Simulación A/B sintética y analizador de CSV real
+src/generar_tablero.py         Tablero visual autónomo en HTML
 tests/test_project.py          Pruebas automáticas
 notebooks/evaluacion_validacion_modelos.ipynb
 resultados/                    CSV, JSON y gráficos exportados
+resultados/tablero_resultados.html Tablero visual consolidado y autocontenido
 reporte/Reporte_Tecnico_Evaluacion_Validacion.docx
 plantillas/                    Esquema vacío para una futura prueba A/B real
 Tweets.csv                     Archivo local del conjunto, no versionado
@@ -41,11 +43,14 @@ Desde la carpeta del proyecto:
 ```powershell
 .\.venv\Scripts\python.exe -m src.evaluacion_modelos --data Tweets.csv --output resultados
 .\.venv\Scripts\python.exe -m src.prueba_ab --output resultados
+.\.venv\Scripts\python.exe -m src.generar_tablero
 .\.venv\Scripts\python.exe -m src.generar_reporte
 .\.venv\Scripts\python.exe -m pytest -q
 ```
 
 El primer comando crea métricas, validación cruzada, reportes por clase, matrices de confusión, curvas ROC y análisis de umbrales. El segundo crea una **SIMULACIÓN CON DATOS SINTÉTICOS** reproducible. El analizador real se ejecuta indicando `--real-csv archivo.csv`; espera `grupo`, `caso_id`, `negativo_real` y `negativo_detectado`.
+
+Abre `resultados/tablero_resultados.html` en un navegador para consultar la comparación de modelos, el F1 de validación cruzada, las matrices, ROC/AUC, umbral, impacto ilustrativo y la simulación A/B. El tablero es un único archivo HTML y lleva las gráficas incrustadas.
 
 La plantilla vacía está en `plantillas/plantilla_ab_real.csv`. Cuando haya observaciones reales, complétala y ejecuta:
 
