@@ -1,0 +1,12 @@
+{
+  "volume": 1000,
+  "threshold": 0.3,
+  "basis": "Observed holdout prevalence, recall and false-positive rate; illustrative projection only.",
+  "holdout_negative_prevalence": 0.6303366886497744,
+  "observed_recall": 0.9333700440528634,
+  "observed_false_positive_rate": 0.27793427230046946,
+  "projected_negative_detected": 588,
+  "projected_negative_missed": 42,
+  "projected_false_alerts": 103,
+  "projected_alerts_for_review": 691
+}

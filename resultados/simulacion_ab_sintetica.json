@@ -1,0 +1,44 @@
+{
+  "label":"SIMULACIÓN CON DATOS SINTÉTICOS",
+  "assumptions":{
+    "baseline_recall":0.65,
+    "assisted_recall":0.75,
+    "negative_prevalence":0.3,
+    "alpha":0.05,
+    "target_power":0.8,
+    "seed":42
+  },
+  "estimated_n_negative_per_group":329,
+  "simulated_n_negative_per_group":329,
+  "groups":[
+    {
+      "grupo":"A",
+      "casos_total":1097,
+      "negativos_reales":329,
+      "negativos_detectados":216,
+      "recall":0.6565349544,
+      "alertas_falsas":144,
+      "precision_alertas":0.6
+    },
+    {
+      "grupo":"B",
+      "casos_total":1097,
+      "negativos_reales":329,
+      "negativos_detectados":237,
+      "recall":0.7203647416,
+      "alertas_falsas":175,
+      "precision_alertas":0.5752427184
+    }
+  ],
+  "test":{
+    "recall_a":0.6565349544,
+    "recall_b":0.7203647416,
+    "difference_b_minus_a":0.0638297872,
+    "z_statistic":1.7676904271,
+    "p_value":0.0771126712,
+    "confidence_interval_95":[
+      -0.00677459,
+      0.1344341644
+    ]
+  }
+}

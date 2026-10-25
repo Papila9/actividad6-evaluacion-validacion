@@ -1,0 +1,11 @@
+measure,value,interpretation
+volume,1000,"Observed holdout prevalence, recall and false-positive rate; illustrative projection only."
+threshold,0.3,"Observed holdout prevalence, recall and false-positive rate; illustrative projection only."
+basis,"Observed holdout prevalence, recall and false-positive rate; illustrative projection only.","Observed holdout prevalence, recall and false-positive rate; illustrative projection only."
+holdout_negative_prevalence,0.6303366886497744,"Observed holdout prevalence, recall and false-positive rate; illustrative projection only."
+observed_recall,0.9333700440528634,"Observed holdout prevalence, recall and false-positive rate; illustrative projection only."
+observed_false_positive_rate,0.27793427230046946,"Observed holdout prevalence, recall and false-positive rate; illustrative projection only."
+projected_negative_detected,588,"Observed holdout prevalence, recall and false-positive rate; illustrative projection only."
+projected_negative_missed,42,"Observed holdout prevalence, recall and false-positive rate; illustrative projection only."
+projected_false_alerts,103,"Observed holdout prevalence, recall and false-positive rate; illustrative projection only."
+projected_alerts_for_review,691,"Observed holdout prevalence, recall and false-positive rate; illustrative projection only."

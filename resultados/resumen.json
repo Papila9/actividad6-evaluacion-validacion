@@ -1,0 +1,291 @@
+{
+  "diagnostics": {
+    "columns": [
+      "tweet_id",
+      "airline_sentiment",
+      "airline_sentiment_confidence",
+      "negativereason",
+      "negativereason_confidence",
+      "airline",
+      "airline_sentiment_gold",
+      "name",
+      "negativereason_gold",
+      "retweet_count",
+      "text",
+      "tweet_coord",
+      "tweet_created",
+      "tweet_location",
+      "user_timezone"
+    ],
+    "data_types": {
+      "tweet_id": "int64",
+      "airline_sentiment": "str",
+      "airline_sentiment_confidence": "float64",
+      "negativereason": "str",
+      "negativereason_confidence": "float64",
+      "airline": "str",
+      "airline_sentiment_gold": "str",
+      "name": "str",
+      "negativereason_gold": "str",
+      "retweet_count": "int64",
+      "text": "str",
+      "tweet_coord": "str",
+      "tweet_created": "str",
+      "tweet_location": "str",
+      "user_timezone": "str"
+    },
+    "missing_by_column": {
+      "tweet_id": 0,
+      "airline_sentiment": 0,
+      "airline_sentiment_confidence": 0,
+      "negativereason": 5462,
+      "negativereason_confidence": 4118,
+      "airline": 0,
+      "airline_sentiment_gold": 14600,
+      "name": 0,
+      "negativereason_gold": 14608,
+      "retweet_count": 0,
+      "text": 0,
+      "tweet_coord": 13621,
+      "tweet_created": 0,
+      "tweet_location": 4733,
+      "user_timezone": 4820
+    },
+    "records_before": 14640,
+    "missing_text": 0,
+    "missing_label": 0,
+    "empty_text": 0,
+    "invalid_label_rows": 0,
+    "duplicate_rows": 36,
+    "duplicate_text_rows_before_cleaning": 213,
+    "conflicting_text_groups": 25,
+    "conflicting_rows_excluded": 57,
+    "records_after": 14402,
+    "duplicate_text_rows_removed": 181,
+    "class_distribution_before": {
+      "negative": 9178,
+      "neutral": 3099,
+      "positive": 2363
+    },
+    "class_distribution_after": {
+      "negative": 9079,
+      "neutral": 3046,
+      "positive": 2277
+    },
+    "seed": 42,
+    "partition": {
+      "train_rows": 11521,
+      "test_rows": 2881,
+      "seed": 42,
+      "train_class_distribution": {
+        "negative": 7263,
+        "neutral": 2436,
+        "positive": 1822
+      },
+      "test_class_distribution": {
+        "negative": 1816,
+        "neutral": 610,
+        "positive": 455
+      },
+      "shared_texts": 0
+    }
+  },
+  "metrics": [
+    {
+      "model": "DummyClassifier",
+      "accuracy": 0.6303366886497744,
+      "precision_macro": 0.2101122295499248,
+      "recall_macro": 0.3333333333333333,
+      "f1_macro": 0.2577531757859627,
+      "f1_weighted": 0.48741384994166076
+    },
+    {
+      "model": "Regresión logística",
+      "accuracy": 0.8028462339465463,
+      "precision_macro": 0.7459615064621253,
+      "recall_macro": 0.7569141078944647,
+      "f1_macro": 0.7509545904577376,
+      "f1_weighted": 0.8052062686090924
+    },
+    {
+      "model": "Random Forest",
+      "accuracy": 0.7580701145435612,
+      "precision_macro": 0.693986936646486,
+      "recall_macro": 0.7140472764759614,
+      "f1_macro": 0.7019038351538063,
+      "f1_weighted": 0.7636999527563577
+    }
+  ],
+  "cross_validation": [
+    {
+      "model": "DummyClassifier",
+      "f1_macro_mean": 0.2577725675133896,
+      "f1_macro_std": 5.479290015555449e-05,
+      "f1_macro_min": 0.25772097976570824,
+      "f1_macro_max": 0.25782982876408483,
+      "accuracy_mean": 0.6304140304892746,
+      "fold_f1_macro": [
+        0.25776122050736205,
+        0.25772097976570824,
+        0.25772097976570824,
+        0.25782982876408483,
+        0.25782982876408483
+      ]
+    },
+    {
+      "model": "Regresión logística",
+      "f1_macro_mean": 0.7444456096818761,
+      "f1_macro_std": 0.008003772032303503,
+      "f1_macro_min": 0.7332532645448583,
+      "f1_macro_max": 0.7530005284768707,
+      "accuracy_mean": 0.7970655956254519,
+      "fold_f1_macro": [
+        0.7530005284768707,
+        0.7468493786053038,
+        0.7332532645448583,
+        0.7496605183627608,
+        0.7394643584195874
+      ]
+    },
+    {
+      "model": "Random Forest",
+      "f1_macro_mean": 0.6980269417152153,
+      "f1_macro_std": 0.012573899844244339,
+      "f1_macro_min": 0.6778863954767084,
+      "f1_macro_max": 0.7085346703038876,
+      "accuracy_mean": 0.7530587942877801,
+      "fold_f1_macro": [
+        0.7085346703038876,
+        0.7070195067998263,
+        0.6778863954767084,
+        0.7025474654682524,
+        0.6941466705274016
+      ]
+    }
+  ],
+  "statistics": {
+    "contingency_correct_both": 2029,
+    "contingency_logistic_only": 284,
+    "contingency_forest_only": 155,
+    "contingency_both_wrong": 413,
+    "mcnemar_chi2_cc": 37.32118451025057,
+    "mcnemar_exact_p": 7.623333919649303e-10,
+    "alpha": 0.05,
+    "auc_ovr_macro_logistic": 0.9177858504655108,
+    "auc_ovr_macro_random_forest": 0.8821107309275084,
+    "roc_results": {
+      "Regresión logística": 0.9177858504655108,
+      "Random Forest": 0.8821107309275084
+    },
+    "selected_model_by_cv_f1_macro": "Regresión logística",
+    "selection_note": "El modelo se selecciona por F1 macro medio de validación cruzada en entrenamiento; el holdout se reserva para evaluación final.",
+    "recommended_negative_threshold": 0.3,
+    "threshold_selection_metric": "F1 binario máximo sobre probabilidades out-of-fold del entrenamiento",
+    "validation_f1_at_recommended_threshold": 0.8809135399673735,
+    "test_metrics_at_recommended_threshold": {
+      "threshold": 0.3,
+      "precision": 0.8513309894525364,
+      "recall": 0.9333700440528634,
+      "f1": 0.8904649330181245,
+      "false_positives": 296,
+      "false_negatives": 121
+    }
+  },
+  "thresholds": [
+    {
+      "threshold": 0.3,
+      "precision": 0.8513309894525364,
+      "recall": 0.9333700440528634,
+      "f1": 0.8904649330181245,
+      "false_positives": 296,
+      "false_negatives": 121
+    },
+    {
+      "threshold": 0.4,
+      "precision": 0.885227896760022,
+      "recall": 0.8876651982378855,
+      "f1": 0.8864448721473742,
+      "false_positives": 209,
+      "false_negatives": 204
+    },
+    {
+      "threshold": 0.5,
+      "precision": 0.9192660550458716,
+      "recall": 0.8276431718061674,
+      "f1": 0.8710518690234714,
+      "false_positives": 132,
+      "false_negatives": 313
+    },
+    {
+      "threshold": 0.6,
+      "precision": 0.9442896935933147,
+      "recall": 0.7466960352422908,
+      "f1": 0.8339483394833949,
+      "false_positives": 80,
+      "false_negatives": 460
+    },
+    {
+      "threshold": 0.7,
+      "precision": 0.9596375617792422,
+      "recall": 0.6415198237885462,
+      "f1": 0.768976897689769,
+      "false_positives": 49,
+      "false_negatives": 651
+    }
+  ],
+  "validation_thresholds": [
+    {
+      "threshold": 0.3,
+      "precision": 0.8372612255023567,
+      "recall": 0.929368029739777,
+      "f1": 0.8809135399673735,
+      "false_positives": 1312,
+      "false_negatives": 513
+    },
+    {
+      "threshold": 0.4,
+      "precision": 0.8774361789733736,
+      "recall": 0.8802147872779843,
+      "f1": 0.8788232868238367,
+      "false_positives": 893,
+      "false_negatives": 870
+    },
+    {
+      "threshold": 0.5,
+      "precision": 0.9084452678709279,
+      "recall": 0.8101335536279775,
+      "f1": 0.8564774381368268,
+      "false_positives": 593,
+      "false_negatives": 1379
+    },
+    {
+      "threshold": 0.6,
+      "precision": 0.9329768270944742,
+      "recall": 0.7206388544678507,
+      "f1": 0.8131748621145032,
+      "false_positives": 376,
+      "false_negatives": 2029
+    },
+    {
+      "threshold": 0.7,
+      "precision": 0.9540849320974348,
+      "recall": 0.6093900592041857,
+      "f1": 0.7437405478070912,
+      "false_positives": 213,
+      "false_negatives": 2837
+    }
+  ],
+  "business_impact": {
+    "volume": 1000,
+    "threshold": 0.3,
+    "basis": "Observed holdout prevalence, recall and false-positive rate; illustrative projection only.",
+    "holdout_negative_prevalence": 0.6303366886497744,
+    "observed_recall": 0.9333700440528634,
+    "observed_false_positive_rate": 0.27793427230046946,
+    "projected_negative_detected": 588,
+    "projected_negative_missed": 42,
+    "projected_false_alerts": 103,
+    "projected_alerts_for_review": 691
+  },
+  "best_by_macro_f1": "Regresión logística"
+}

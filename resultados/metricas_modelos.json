@@ -1,0 +1,26 @@
+[
+  {
+    "model":"Regresión logística",
+    "accuracy":0.8028462339,
+    "precision_macro":0.7459615065,
+    "recall_macro":0.7569141079,
+    "f1_macro":0.7509545905,
+    "f1_weighted":0.8052062686
+  },
+  {
+    "model":"Random Forest",
+    "accuracy":0.7580701145,
+    "precision_macro":0.6939869366,
+    "recall_macro":0.7140472765,
+    "f1_macro":0.7019038352,
+    "f1_weighted":0.7636999528
+  },
+  {
+    "model":"DummyClassifier",
+    "accuracy":0.6303366886,
+    "precision_macro":0.2101122295,
+    "recall_macro":0.3333333333,
+    "f1_macro":0.2577531758,
+    "f1_weighted":0.4874138499
+  }
+]
