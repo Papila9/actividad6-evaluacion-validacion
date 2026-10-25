@@ -7,6 +7,8 @@ import pandas as pd
 from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.shared import Inches, Pt
+from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
 
 
 def build_report(results_dir: str = "resultados", output: str = "reporte/Reporte_Tecnico_Evaluacion_Validacion.docx") -> Path:
@@ -28,6 +30,21 @@ def build_report(results_dir: str = "resultados", output: str = "reporte/Reporte
 
     def title(text): doc.add_heading(text, level=1)
     def para(text): doc.add_paragraph(text)
+    def hyperlink(paragraph, text, url):
+        relationship_id = paragraph.part.relate_to(
+            url,
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink",
+            is_external=True,
+        )
+        link = OxmlElement("w:hyperlink")
+        link.set(qn("r:id"), relationship_id)
+        run = OxmlElement("w:r")
+        properties = OxmlElement("w:rPr")
+        color = OxmlElement("w:color"); color.set(qn("w:val"), "0563C1")
+        underline = OxmlElement("w:u"); underline.set(qn("w:val"), "single")
+        properties.append(color); properties.append(underline); run.append(properties)
+        text_node = OxmlElement("w:t"); text_node.text = text; run.append(text_node)
+        link.append(run); paragraph._p.append(link)
     def table(frame, cols=None, digits=3):
         if cols: frame = frame[cols]
         t = doc.add_table(rows=1, cols=len(frame.columns)); t.style = "Light Shading Accent 1"
@@ -46,6 +63,10 @@ def build_report(results_dir: str = "resultados", output: str = "reporte/Reporte
     p.add_run("Reporte técnico\n\n")
     p.add_run("Fecha de ejecución: 24 de octubre de 2026\n")
     p.add_run("Dataset: Twitter US Airline Sentiment")
+    dashboard = doc.add_paragraph()
+    dashboard.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    dashboard.add_run("Tablero visual de resultados: ")
+    hyperlink(dashboard, "Abrir tablero en línea", "https://papila9.github.io/actividad6-evaluacion-validacion/resultados/tablero_resultados.html")
     page()
 
     title("1. Contexto, problema y objetivo")

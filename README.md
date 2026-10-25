@@ -1,5 +1,9 @@
 # Evaluación y validación de modelos
 
+## Tablero visual
+
+[Ver el tablero de resultados en línea](https://papila9.github.io/actividad6-evaluacion-validacion/resultados/tablero_resultados.html)
+
 Proyecto académico para comparar modelos de clasificación de sentimiento en el conjunto Twitter US Airline Sentiment. Se comparan un clasificador base, Regresión Logística y Random Forest con TF-IDF; el F1 macro es la métrica principal por el desequilibrio entre clases.
 
 ## Datos
